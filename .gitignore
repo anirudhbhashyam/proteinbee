@@ -4,3 +4,5 @@ __pycache__
 *-v*
 .venv
 CACHEDIR.TAG
+dist
+*.egg-info
