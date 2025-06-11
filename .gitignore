@@ -1,0 +1,6 @@
+.hypothesis
+.pytest_cache
+__pycache__
+*-v*
+.venv
+CACHEDIR.TAG
