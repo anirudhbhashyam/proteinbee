@@ -1,3 +1,5 @@
+import collections
+
 from dataclasses import dataclass
 
 import re
@@ -60,7 +62,7 @@ class Motif:
     def from_string(cls, s: str, delim: str = "/") -> Self:
         components = []
         for sel in s.split(delim):
-            if sel.isnumeric():
+            if sel.isnumeric() or sel == "-1":
                 components.append(int(sel))
             else:
                 components.append(
@@ -112,7 +114,7 @@ class Motif:
             if comp == 0 or i == len(self.components) - 1:
                 if comp != 0:
                     motif_components_batch.append(comp)
-                yield type(self)(motif_components_batch)
+                yield type(self)(motif_components_batch, self.delim)
                 motif_components_batch = []
             else:
                 motif_components_batch.append(comp)
