@@ -8,3 +8,8 @@ A small package to work with protein structures, selections and motifs.
 ```bash
 pip install proteinbee
 ```
+
+# Coming soon
+
+- Alignments
+- Documentation
