@@ -23,3 +23,6 @@ dev = [
     "hypothesis>=6.135.6",
     "pytest>=8.4.0",
 ]
+docs = [
+    "pdoc>=15.0.4",
+]
